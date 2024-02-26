@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_spring-mvc-app1" default="compile.module.spring-mvc-app1">
+  <dirname property="module.spring-mvc-app1.basedir" file="${ant.file.module_spring-mvc-app1}"/>
+  
+  <property name="module.jdk.home.spring-mvc-app1" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.spring-mvc-app1" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.spring-mvc-app1" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.spring-mvc-app1" value="-encoding UTF-8 -source 19 -target 19 ${compiler.args}"/>
+  
+  <property name="spring-mvc-app1.output.dir" value="${module.spring-mvc-app1.basedir}/target/classes"/>
+  <property name="spring-mvc-app1.testoutput.dir" value="${module.spring-mvc-app1.basedir}/target/test-classes"/>
+  
+  <path id="spring-mvc-app1.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="spring-mvc-app1.module.production.classpath">
+    <path refid="${module.jdk.classpath.spring-mvc-app1}"/>
+    <path refid="library.maven:_org.springframework:spring-core:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jcl:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:6.1.4.classpath"/>
+    <path refid="library.maven:_io.micrometer:micrometer-observation:1.12.3.classpath"/>
+    <path refid="library.maven:_io.micrometer:micrometer-commons:1.12.3.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:6.1.4.classpath"/>
+    <path refid="library.maven:_org.thymeleaf:thymeleaf-spring5:3.1.2.release.classpath"/>
+    <path refid="library.maven:_org.thymeleaf:thymeleaf:3.1.2.release.classpath"/>
+    <path refid="library.maven:_org.attoparser:attoparser:2.0.7.release.classpath"/>
+    <path refid="library.maven:_org.unbescape:unbescape:1.1.6.release.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:2.0.7.classpath"/>
+  </path>
+  
+  <path id="spring-mvc-app1.runtime.production.module.classpath">
+    <pathelement location="${spring-mvc-app1.output.dir}"/>
+    <path refid="library.maven:_org.springframework:spring-core:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jcl:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:6.1.4.classpath"/>
+    <path refid="library.maven:_io.micrometer:micrometer-observation:1.12.3.classpath"/>
+    <path refid="library.maven:_io.micrometer:micrometer-commons:1.12.3.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:6.1.4.classpath"/>
+    <path refid="library.maven:_org.thymeleaf:thymeleaf-spring5:3.1.2.release.classpath"/>
+    <path refid="library.maven:_org.thymeleaf:thymeleaf:3.1.2.release.classpath"/>
+    <path refid="library.maven:_org.attoparser:attoparser:2.0.7.release.classpath"/>
+    <path refid="library.maven:_org.unbescape:unbescape:1.1.6.release.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:2.0.7.classpath"/>
+  </path>
+  
+  <path id="spring-mvc-app1.module.classpath">
+    <path refid="${module.jdk.classpath.spring-mvc-app1}"/>
+    <pathelement location="${spring-mvc-app1.output.dir}"/>
+    <path refid="library.maven:_junit:junit:3.8.1.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jcl:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:6.1.4.classpath"/>
+    <path refid="library.maven:_io.micrometer:micrometer-observation:1.12.3.classpath"/>
+    <path refid="library.maven:_io.micrometer:micrometer-commons:1.12.3.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:6.1.4.classpath"/>
+    <path refid="library.maven:_org.thymeleaf:thymeleaf-spring5:3.1.2.release.classpath"/>
+    <path refid="library.maven:_org.thymeleaf:thymeleaf:3.1.2.release.classpath"/>
+    <path refid="library.maven:_org.attoparser:attoparser:2.0.7.release.classpath"/>
+    <path refid="library.maven:_org.unbescape:unbescape:1.1.6.release.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:2.0.7.classpath"/>
+  </path>
+  
+  <path id="spring-mvc-app1.runtime.module.classpath">
+    <pathelement location="${spring-mvc-app1.testoutput.dir}"/>
+    <pathelement location="${spring-mvc-app1.output.dir}"/>
+    <path refid="library.maven:_junit:junit:3.8.1.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-core:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-jcl:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-web:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-beans:6.1.4.classpath"/>
+    <path refid="library.maven:_io.micrometer:micrometer-observation:1.12.3.classpath"/>
+    <path refid="library.maven:_io.micrometer:micrometer-commons:1.12.3.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-webmvc:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-aop:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-expression:6.1.4.classpath"/>
+    <path refid="library.maven:_org.springframework:spring-context:6.1.4.classpath"/>
+    <path refid="library.maven:_org.thymeleaf:thymeleaf-spring5:3.1.2.release.classpath"/>
+    <path refid="library.maven:_org.thymeleaf:thymeleaf:3.1.2.release.classpath"/>
+    <path refid="library.maven:_org.attoparser:attoparser:2.0.7.release.classpath"/>
+    <path refid="library.maven:_org.unbescape:unbescape:1.1.6.release.classpath"/>
+    <path refid="library.maven:_org.slf4j:slf4j-api:2.0.7.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.spring-mvc-app1">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.spring-mvc-app1">
+    <patternset refid="excluded.from.module.spring-mvc-app1"/>
+  </patternset>
+  
+  <path id="spring-mvc-app1.module.sourcepath">
+    <dirset dir="${module.spring-mvc-app1.basedir}">
+      <include name="src/main/resources"/>
+      <include name="target/generated-sources/annotations"/>
+    </dirset>
+  </path>
+  
+  <path id="spring-mvc-app1.module.test.sourcepath">
+    <dirset dir="${module.spring-mvc-app1.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/java"/>
+      <include name="target/generated-test-sources/test-annotations"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.spring-mvc-app1" depends="compile.module.spring-mvc-app1.production,compile.module.spring-mvc-app1.tests" description="Compile module spring-mvc-app1"/>
+  
+  <target name="compile.module.spring-mvc-app1.production" depends="register.custom.compilers" description="Compile module spring-mvc-app1; production classes">
+    <mkdir dir="${spring-mvc-app1.output.dir}"/>
+    <javac2 destdir="${spring-mvc-app1.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.spring-mvc-app1}/javac">
+      <compilerarg line="${compiler.args.spring-mvc-app1}"/>
+      <bootclasspath refid="spring-mvc-app1.module.bootclasspath"/>
+      <classpath refid="spring-mvc-app1.module.production.classpath"/>
+      <src refid="spring-mvc-app1.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.spring-mvc-app1"/>
+    </javac2>
+    
+    <copy todir="${spring-mvc-app1.output.dir}">
+      <fileset dir="${module.spring-mvc-app1.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.spring-mvc-app1.basedir}/target/generated-sources/annotations">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.spring-mvc-app1.tests" depends="register.custom.compilers,compile.module.spring-mvc-app1.production" description="compile module spring-mvc-app1; test classes" unless="skip.tests">
+    <mkdir dir="${spring-mvc-app1.testoutput.dir}"/>
+    <javac2 destdir="${spring-mvc-app1.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.spring-mvc-app1}/javac">
+      <compilerarg line="${compiler.args.spring-mvc-app1}"/>
+      <bootclasspath refid="spring-mvc-app1.module.bootclasspath"/>
+      <classpath refid="spring-mvc-app1.module.classpath"/>
+      <src refid="spring-mvc-app1.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.spring-mvc-app1"/>
+    </javac2>
+    
+    <copy todir="${spring-mvc-app1.testoutput.dir}">
+      <fileset dir="${module.spring-mvc-app1.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.spring-mvc-app1.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.spring-mvc-app1.basedir}/target/generated-test-sources/test-annotations">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.spring-mvc-app1" description="cleanup module">
+    <delete dir="${spring-mvc-app1.output.dir}"/>
+    <delete dir="${spring-mvc-app1.testoutput.dir}"/>
+  </target>
+</project>
