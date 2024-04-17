@@ -23,4 +23,23 @@ public class FirstController {
     public String goodByePage() {
         return "first/goodbye";
     }
+
+    @GetMapping("/calculator")
+    public String calculatorPage(@RequestParam(value = "a", required = true) double a,
+                                 @RequestParam(value = "b", required = true) double b,
+                                 @RequestParam(value = "action", required = true) String action,
+                                 Model model) {
+        double result = 0;
+        if (action.equalsIgnoreCase("multiplication")) {
+            result = a * b;
+        } else if (action.equalsIgnoreCase("addition")) {
+            result = a + b;
+        } else if (action.equalsIgnoreCase("subtraction")) {
+            result = a - b;
+        } else if (action.equalsIgnoreCase("division")) {
+            result = a / b;
+        }
+        model.addAttribute("result", result);
+        return "first/calculator";
+    }
 }
